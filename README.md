@@ -1,6 +1,9 @@
 # Getting started
 
-This project was created with `create-simple-express`
+This project was created with `create-simple-express`.
+
+## Description
+A mini-dictionary API of common cybersecurity terms.
 
 ## Installation
 
@@ -21,3 +24,42 @@ npm run dev
 ```
 
 This will run the app in the development mode.
+
+## Use
+
+Lists all the words in the dictionary
+```
+/words
+```
+
+Returns a specific word, its type, and definition.
+
+```
+/words/{word}
+```
+
+Returns all words that match the given type (verb, noun, or adjective).
+```
+/filter?type={verb}
+```
+
+Returns all words that contain the letters indicated in the query.
+```
+/search?q={query}
+```
+
+Returns a random word from the dictionary list
+```
+/random
+```
+
+Returns all words that begin with the specified letter
+```
+/starts-with/{letter}
+```
+
+Returns all words, sorted either by length or alphabetically.
+```
+/sort?by=length
+/sort?by=alphabet
+```
