@@ -74,7 +74,7 @@ app.get('/starts-with/:letter', (req, res) => {
     .filter(item => item.word.startsWith(letter))
     .map(item => item.word);
 
-  res.send(startsWith);
+  res.status(200).json(startsWith);
 });
 
 // GET /sort?by=length /sort?by=alphabet
@@ -97,7 +97,7 @@ app.get('/sort', (req, res) => {
         break;
   }
 
-  res.send(sortedList);
+  res.status(200).json(sortedList);
 });
 
 app.listen(PORT, () => {
