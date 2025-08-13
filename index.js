@@ -15,16 +15,6 @@ app.get('/', (req, res) => {
 
 // GET /words
 app.get('/words', (req, res) => {
-  //const title = 'Cybersecurity Word List'
-  // const html = `
-  //   <h1>Word List</h1>
-  //   <ul>
-  //     ${data.map(item => `<p><li>${item.word}</li></p>`).join('')}
-      
-  //   </ul>
-  // `;
-  // res.send(html);
-
   res.status(200).json(
     data.map(item => item.word)
   );
@@ -37,13 +27,6 @@ app.get('/words/:word', (req, res) => {
   if (!found) {
     res.status(404).send('Error 404: Not found.');
   }
-
-  // const html = `
-  //   <h3>${found.word}</h3>
-  //   <p><i>${found.type}</i></p>
-  //   <p>${found.definition}</p>
-  // `
-  // res.send(html)
 
   res.status(200).json({
     word: found.word,
@@ -63,13 +46,6 @@ app.get('/filter', (req, res) => {
     res.status(400).send('Error 400. Bad request.');
   }
 
-  // const html = `
-  //   <h3>Words that are ${type}s</h3>
-  //   <ul>
-  //   ${filteredList.map(item => `<li>${item.word}</li>`).join('')}
-  //   </ul>
-  // `
-  // res.send(html);
   res.status(200).json(
     filteredList
   );
@@ -123,8 +99,6 @@ app.get('/sort', (req, res) => {
 
   res.send(sortedList);
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`App is listening to port ${PORT}`);
