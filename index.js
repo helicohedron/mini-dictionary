@@ -9,7 +9,7 @@ app.set('port', PORT);
 
 app.get('/', (req, res) => {
   res.status(200).json({
-    message: 'Hello World!'
+    message: 'Mini-Dictionary of CyberSecurity Terms'
   });
 });
 
