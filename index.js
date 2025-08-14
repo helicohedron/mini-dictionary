@@ -35,7 +35,7 @@ app.get('/words/:word', (req, res) => {
   });
 });
 
-// GET /filter?type=verb
+// GET /filter?type=verb,noun,adjective
 app.get('/filter', (req, res) => {
   const { type } = req.query;
   const filteredList = data.filter(item => 
