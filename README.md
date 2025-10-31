@@ -1,6 +1,6 @@
 # Getting started
 
-This project was created with `create-simple-express`.
+This project was created with [create-simple-express](https://github.com/jayaregalinada/create-simple-express)
 
 ## Description
 A mini-dictionary API of common cybersecurity terms.
